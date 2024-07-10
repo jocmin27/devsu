@@ -2,12 +2,13 @@
 Solución test técnico.
 
 Proyecto
-Cliente Service
- -clienteservice
+
+Cliente Service 
+  -clienteservice
  
 Cuenta Service
-  -cuentaservice
+   -cuentaservice
 
   
 Scripts BD
-  mysqk/BaseDatos.sql
+  mysql/BaseDatos.sql
