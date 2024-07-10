@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  cliente-persona:
+    build:
+      context: ./cliente-persona
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+
+  cuenta-movimientos:
+    build:
+      context: ./cuenta-movimientos
+    ports:
+      - "8082:8082"
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: ./mysql
+    environment:
+      MYSQL_DATABASE: microservicios
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3306:3306"
